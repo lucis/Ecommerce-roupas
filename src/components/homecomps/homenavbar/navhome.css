@@ -1,0 +1,58 @@
+.container_logo{
+    background-image: url("logo_adidas.png");
+    background-repeat: no-repeat ;
+    background-size: contain;
+    background-position: center center;
+    width: 60px;
+    height: 80px;
+}
+.btns{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btns2{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.icon_btn{
+    border: none;
+    background: white;
+    margin: 20px;
+    cursor: pointer;
+    padding: 4px;
+
+}
+.icon_btn :hover{
+    background: #e9ecef;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.container_btns{
+    padding: 4px;
+    padding-left: 20px;
+}
+
+.container_btns :hover{
+    border-bottom: 3px solid black;
+    cursor: pointer;
+    padding-bottom: 8px;
+   
+}
+@media (max-width: 800px) {
+    .btns{
+        display: none;
+    }
+    .headernav{
+        font-size: 5px;
+    }
+    .icon_btn{
+        display:none;
+    }
+}
