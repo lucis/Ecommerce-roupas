@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React, { FC } from "react";
+import "../../../pages/home/homepag.css"
 
 
 
@@ -7,7 +8,7 @@ const DirectToBuy: FC = ({ children }) => {
     return (
         <div>
             <Box>
-                <button>{children}</button>
+                <button className="btn_buy">{children}</button>
             </Box>
         </div>
     )

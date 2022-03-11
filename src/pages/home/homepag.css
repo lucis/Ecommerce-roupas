@@ -5,4 +5,46 @@
     background-position: center center;
     height: 100vh;
 }
+
+.container_header_float{
+   font-weight: 500;
+   font-family: monospace;
+}
+
+.container_img{
+    background-image: url("patrocinio_fla.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 110px;
+    
+}
+
+.container_btn_buy{
+    border: 1px solid white;
+    width: 207px;
+    
+}
+.container_btn_buy:hover{
+    background-color: white;
+}
+.btn_buy{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: monospace;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .container_float{
+        margin-top: 300px;
+    }
+    .container_header_float{
+        font-size: 10px;
+    }
+} 
     
