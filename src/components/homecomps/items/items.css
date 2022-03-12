@@ -1,0 +1,9 @@
+.container_item:hover{
+    border:1px solid black;
+    cursor: pointer;
+    
+}
+
+.font_item{
+    font-style: italic;
+}

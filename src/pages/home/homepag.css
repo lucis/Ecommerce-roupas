@@ -22,8 +22,9 @@
 }
 
 .container_btn_buy{
-    border: 1px solid white;
-    width: 207px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 206px;
     
 }
 .container_btn_buy:hover{
@@ -39,7 +40,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
     .container_float{
         margin-top: 300px;
     }
