@@ -1,0 +1,60 @@
+.container_imgfla{
+    background-image: url("p_fla.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.container_headerimg{
+    position: relative;
+    top:400px;
+    padding: 60px;
+}
+
+.header_imgfla{
+    color: white;
+    font-size: 20px;
+    width: 35%;
+    
+}
+
+.header_imgfla2{
+    font-size: 17px;
+    font-weight: 450;
+    width: 30%;
+    font-family: monospace;
+    
+}
+.btn_imgfla{
+    padding: 10px;
+    background: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.btn_imgfla:hover{
+    background-color: rgb(235, 237, 238);
+    color:"gray";
+    cursor:pointer;
+}
+
+@media (max-width: 1000px) {
+    .header_imgfla{
+       font-size: 13px;
+       position: relative;
+       bottom: 100px;
+    }
+    .header_imgfla2{
+        font-size: 15px;
+        position: relative;
+        bottom: 100px;
+        width: 50%;
+     }
+    .btn_imgfla{
+        position: relative;
+        bottom: 100px;
+    }
+   
+}

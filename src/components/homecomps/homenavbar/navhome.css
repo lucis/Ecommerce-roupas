@@ -45,6 +45,11 @@
     padding-bottom: 8px;
    
 }
+
+.header_navdown{
+    color: white;
+}
+
 @media (max-width: 1000px) {
     .btns{
         display: none;

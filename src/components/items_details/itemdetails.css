@@ -1,0 +1,21 @@
+.container_img_product{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.btn_addcart{
+    padding:12px;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn_addcart:hover{
+    color: gray;
+    transition: all 0.4s;
+}

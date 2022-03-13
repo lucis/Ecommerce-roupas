@@ -42,10 +42,11 @@
 
 @media (max-width: 1000px) {
     .container_float{
-        margin-top: 300px;
+        margin-top: 250px;
     }
     .container_header_float{
-        font-size: 10px;
+        font-size: 9px;
     }
+    
 } 
     

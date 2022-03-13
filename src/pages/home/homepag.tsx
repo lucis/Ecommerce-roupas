@@ -10,6 +10,7 @@ import ContainerFloat from "../../components/homecomps/containerfloat/containerf
 import ContainerTeam from "../../components/homecomps/containerteam/containerteam";
 import ItemsProduct from "../../components/homecomps/items/itemsproduct";
 import HeaderItem from "../../components/homecomps/items/headeritems";
+import ContainerImgFla from "../../components/homecomps/container_imgfla/containerimgfla";
 
 
 const HomePag = () => {
@@ -33,7 +34,9 @@ const HomePag = () => {
                 <HeaderItem />
                 <ItemsProduct />
             </Box>
-            sdfsdfusfhdskfdsj
+            <Box mt="20px">
+                <ContainerImgFla />
+            </Box>
         </div>
     )
 }

@@ -22,7 +22,7 @@ const HeaderNavDown = () => {
 
             >
                 <Box display="flex" margin="auto" >
-                    Cadastre-se para receber 15% de desconto. <Link to="/"><Box color="white" ml="5px"> Entre para o clube</Box></Link>
+                    Cadastre-se para receber 15% de desconto. <Link className="header_navdown" to="/"><Box color="white" ml="5px"> Entre para o clube</Box></Link>
                 </Box>
                 <Box mt="4px" mr="6px">
                     <Button onClick={hide} ><Box mt="4px" color="white"><CloseTwoToneIcon /></Box></Button>
