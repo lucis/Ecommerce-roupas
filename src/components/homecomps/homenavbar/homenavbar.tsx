@@ -12,6 +12,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import "./navhome.css"
 import NavHomeBtns2 from "./navhomebtns2";
 import IconBtnNavHome from "./iconbtnnavhome";
+import { Link } from "react-router-dom";
 
 
 const HomeNavBar = () => {
@@ -64,9 +65,11 @@ const HomeNavBar = () => {
                     <Box >
                         <IconBtnNavHome><FavoriteBorderOutlinedIcon /></IconBtnNavHome>
                     </Box>
-                    <Box >
-                        <IconBtnNavHome><ShoppingCartOutlinedIcon /></IconBtnNavHome>
-                    </Box>
+                    <Link to="/cart">
+                        <Box >
+                            <IconBtnNavHome><ShoppingCartOutlinedIcon /></IconBtnNavHome>
+                        </Box>
+                    </Link>
                 </Box>
                 <Box mr="35px" ml="30px">
                     <LogoNavBar />

@@ -1,8 +1,9 @@
 import { Box } from '@mui/system';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import BtnAddCart from './btnaddcart';
 import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
 import "./itemdetails.css"
+import { CartContext } from '../../utils/cartprovider';
 
 interface Props {
     imgurl: string
@@ -15,10 +16,10 @@ interface Props {
 const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl }) => {
     return (
         <div>
-            <Box >
-                <Box display="-webkit-flex">
-                    <Box textAlign="center" flex="1" bgcolor="rgb(235, 237, 238)">
-                        <img src={imgurl} />
+            <Box className="container_img_product_media">
+                <Box display="flex">
+                    <Box className="container_img_product" textAlign="center" flex="1" bgcolor="rgb(235, 237, 238)">
+                        <img className="img_product" src={imgurl} />
                     </Box>
                     <Box width="32%"
                         display="block"
@@ -54,7 +55,7 @@ const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl 
                             </Box>
                         </Box>
                         <Box >
-                            <BtnAddCart><Box display="flex" >Adicionar ao carrinho<Box ml="15px"><ArrowForwardOutlinedIcon /></Box></Box></BtnAddCart>
+                            <BtnAddCart img={imgurl} product={producturl} price={priceurl}><Box display="flex" >Adicionar ao carrinho<Box ml="15px"><ArrowForwardOutlinedIcon /></Box></Box></BtnAddCart>
                         </Box>
                     </Box>
                 </Box>

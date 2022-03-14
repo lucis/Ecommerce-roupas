@@ -19,3 +19,15 @@
     color: gray;
     transition: all 0.4s;
 }
+
+@media (max-width: 1000px){
+    .container_img_product_media{
+        width: 90%;
+    }
+    .container_img_product{
+        width: 90%;
+    }
+    .img_product{
+        width: 90%;
+    }
+}
