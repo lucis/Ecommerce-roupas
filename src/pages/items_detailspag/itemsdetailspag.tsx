@@ -20,6 +20,7 @@ const ItemsDetailsPag = () => {
             <Box>
                 <HeaderNav />
                 <HomeNavBar />
+                <hr style={{ border: "0", height: "0", borderTop: "1px solid rgba(0, 0, 0, 0.1)" }} />
                 <ItemsDetails
                     producturl={useQuery().get("product") ?? ""}
                     imgurl={useQuery().get("img") ?? ""}

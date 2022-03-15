@@ -1,3 +1,4 @@
+import { CollectionsBookmarkOutlined } from "@material-ui/icons";
 import { Box } from "@mui/system";
 import React, { FC, useContext } from "react";
 import { CartContext } from "../../utils/cartprovider";
@@ -11,17 +12,20 @@ interface Props {
 
 const BtnAddCart: FC<Props> = ({ children, img, product, price }) => {
     const { cart, setCart } = useContext(CartContext)
-
+    { console.log(cart) }
     const AddToCart = () => {
-        setCart(
-            {
-                img,
-                product,
-                price,
-            }
+            setCart(
+                [...cart,
+                {
+                    img,
+                    product,
+                    price,
+                }
+                ]
+            )
 
-        )
-        console.log(cart)
+
+
     }
     return (
         <div>

@@ -11,6 +11,7 @@ import ContainerTeam from "../../components/homecomps/containerteam/containertea
 import ItemsProduct from "../../components/homecomps/items/itemsproduct";
 import HeaderItem from "../../components/homecomps/items/headeritems";
 import ContainerImgFla from "../../components/homecomps/container_imgfla/containerimgfla";
+import ItemsProvider from "../../utils/itemsprovider";
 
 
 const HomePag = () => {

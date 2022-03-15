@@ -15,6 +15,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import { Box } from "@mui/system";
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MenuBtn = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -43,9 +44,13 @@ const MenuBtn = () => {
             >
                 <MenuItem onClick={handleClose}><Box marginRight="8px"><AccountCircleIcon /></Box>Profile</MenuItem>
                 <hr />
-                <MenuItem onClick={handleClose}><Box marginRight="8px"><ShoppingCartOutlinedIcon /></Box>Cart</MenuItem>
+                <Link to="/cart" className="menu_btn">
+                    <MenuItem onClick={handleClose}><Box marginRight="8px"><ShoppingCartOutlinedIcon /></Box>Cart</MenuItem>
+                </Link>
                 <hr />
-                <MenuItem onClick={handleClose}><Box marginRight="8px"><HomeOutlinedIcon /></Box>Home</MenuItem>
+                <Link to="/" className="menu_btn">
+                    <MenuItem onClick={handleClose}><Box marginRight="8px"><HomeOutlinedIcon /></Box>Home</MenuItem>
+                </Link>
                 <hr />
                 <MenuItem onClick={handleClose}><Box marginRight="8px"><FavoriteBorderOutlinedIcon /></Box>Favoritos</MenuItem>
                 <hr />

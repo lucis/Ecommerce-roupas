@@ -34,7 +34,7 @@ const ItemsProduct = () => {
                                     borderRadius="7px"
                                     ml="10px"
                                 >
-                                    <h2>{item.price}</h2>
+                                    <h2>R$ {item.price}</h2>
                                 </Box>
                             </Box>
                             <Box m="5px" width="100%">

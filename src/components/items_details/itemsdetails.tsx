@@ -39,12 +39,12 @@ const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl 
                             fontFamily="monospace"
                             position="relative"
                             top="px">
-                            {priceurl}
+                           R$ {priceurl}
                         </Box>
                         <Box fontWeight="200"
                             position="relative"
                             top="30px">
-                            <Box display="flex">Até 10x<Box fontWeight="bold" mr="5px" ml="5px">R$ 100</Box> sem juros</Box>
+                            <Box display="flex">Até 10x<Box fontWeight="bold" mr="5px" ml="5px"> R$ {(parseFloat(priceurl) / 10).toFixed(2)}</Box> sem juros</Box>
                         </Box>
                         <Box position="relative"
                             top="70px"
