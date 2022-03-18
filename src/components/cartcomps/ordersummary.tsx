@@ -13,11 +13,9 @@ const OrderSummary: FC = () => {
 
     return (
         <div>
-            <Box width="85%"
+            <Box 
                 border="0.04px solid rgb(0,0,0,1)"
-                padding="20px"
-                position="relative"
-                right="70px">
+                padding="20px">
                 <Box fontSize="20px"
                     fontWeight="700">
                     RESUMO DO PEDIDO

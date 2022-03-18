@@ -25,7 +25,8 @@ const ItemsDetailsPag = () => {
                     producturl={useQuery().get("product") ?? ""}
                     imgurl={useQuery().get("img") ?? ""}
                     priceurl={useQuery().get("price") ?? ""}
-                    descriptionurl={useQuery().get("description") ?? ""} />
+                    descriptionurl={useQuery().get("description") ?? ""}
+                    quantityurl= {useQuery().get("quantity") ?? ""} />
             </Box>
         </div>
     )

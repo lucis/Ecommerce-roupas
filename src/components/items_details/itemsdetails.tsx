@@ -5,15 +5,17 @@ import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
 import "./itemdetails.css"
 import { CartContext } from '../../utils/cartprovider';
 
+
 interface Props {
     imgurl: string
     producturl: string
     priceurl: string
     descriptionurl: string
+    quantityurl: string
 
 }
 
-const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl }) => {
+const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl, quantityurl }) => {
     return (
         <div>
             <Box className="container_img_product_media">
@@ -39,7 +41,7 @@ const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl 
                             fontFamily="monospace"
                             position="relative"
                             top="px">
-                           R$ {priceurl}
+                            R$ {priceurl}
                         </Box>
                         <Box fontWeight="200"
                             position="relative"
@@ -55,7 +57,7 @@ const ItemsDetails: FC<Props> = ({ imgurl, producturl, descriptionurl, priceurl 
                             </Box>
                         </Box>
                         <Box >
-                            <BtnAddCart img={imgurl} product={producturl} price={priceurl}><Box display="flex" >Adicionar ao carrinho<Box ml="15px"><ArrowForwardOutlinedIcon /></Box></Box></BtnAddCart>
+                            <BtnAddCart quantity={quantityurl} img={imgurl} product={producturl} price={priceurl}><Box display="flex" >Adicionar ao carrinho<Box ml="15px"><ArrowForwardOutlinedIcon /></Box></Box></BtnAddCart>
                         </Box>
                     </Box>
                 </Box>

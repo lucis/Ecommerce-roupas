@@ -29,3 +29,42 @@
     color: white;
     background-color: black;
 }
+
+@media (max-width: 1000px) {
+   .media_container{
+      margin-left: -150px;
+      margin-right: -150px;
+   }
+   .media_containerImg{
+       width: 80%;
+   }
+   .media_imgItem{
+       width: 150px;
+       height: 150px;
+   }
+   .media-containerFloat{
+       width: 80%;
+   }
+   .media_productName{
+      font-size: 15px;
+      margin: -10px;
+   }
+   .media_sizeProduct{
+       font-size: 12px;
+       margin: -10px;
+   }
+   .media_quantityContainer{
+       position: relative;
+       top: 10px;
+   }
+   .media_priceItem{
+       position: relative;
+       top: 90px;
+       right: 120px;
+   }
+   .media_btnsItem{
+       position: relative;
+       right: 95px;
+   }
+   
+}

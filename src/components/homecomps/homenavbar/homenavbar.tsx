@@ -14,12 +14,15 @@ import NavHomeBtns2 from "./navhomebtns2";
 import IconBtnNavHome from "./iconbtnnavhome";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../utils/cartprovider";
+import { FavoriteContext } from "../../../utils/favoriteprovider";
 
 
 const HomeNavBar = () => {
 
-    const { cart, setCart } = useContext(CartContext)
-    const itemCount = Object.keys(cart).length
+    const { cart } = useContext(CartContext)
+    const { favorite } = useContext(FavoriteContext)
+    const itemCountCart = Object.keys(cart).length
+    const itemCountFavorite = Object.keys(favorite).length
 
     return (
         <div>
@@ -67,9 +70,24 @@ const HomeNavBar = () => {
                     <Box >
                         <IconBtnNavHome><PermIdentityIcon /></IconBtnNavHome>
                     </Box>
-                    <Box >
-                        <IconBtnNavHome><FavoriteBorderOutlinedIcon /></IconBtnNavHome>
-                    </Box>
+                    <Link to="/favorites">
+                        <Box >
+                            <IconBtnNavHome><FavoriteBorderOutlinedIcon /></IconBtnNavHome>
+                        </Box>
+                    </Link>
+                    {itemCountFavorite > 0 && <Box
+                        className="btns"
+                        bgcolor="#007bc6"
+                        borderRadius="30px"
+                        height="23px"
+                        width="23px"
+                        color="white"
+                        textAlign="center"
+                        position="relative"
+                        right="30px"
+                        top="10px"
+                    >
+                        <span  >{itemCountFavorite}</span></Box>}
                     <Box>
                         <Box display="flex">
                             <Link to="/cart">
@@ -79,7 +97,7 @@ const HomeNavBar = () => {
                                     </IconBtnNavHome>
                                 </Box>
                             </Link>
-                            {itemCount > 0 && <Box
+                            {itemCountCart > 0 && <Box
                                 className="btns"
                                 bgcolor="#007bc6"
                                 borderRadius="30px"
@@ -93,7 +111,7 @@ const HomeNavBar = () => {
 
 
                             >
-                                <span  >{itemCount}</span></Box>}
+                                <span>{itemCountCart}</span></Box>}
                         </Box>
                     </Box>
                 </Box>

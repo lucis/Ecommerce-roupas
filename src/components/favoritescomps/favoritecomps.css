@@ -1,0 +1,28 @@
+.btn-addtoFavorite{
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+.btn-addtoFavorite:hover{
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+   
+}
+.link_favorite{
+    color:black;
+}
+.link_favorite:hover{
+    background-color: black;
+    color: white;
+}
+
+.item_container:hover{
+    border: 1px solid black;
+}
+
+.delete_favorite{
+    border: none;
+    padding:5px;
+    cursor: pointer;
+}

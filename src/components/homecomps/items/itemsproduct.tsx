@@ -1,11 +1,17 @@
 import { Box } from "@mui/system";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ItemsContext } from "../../../utils/itemsprovider"
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import "./items.css"
 import { Link } from "react-router-dom";
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import BtnAddToFavoriteItem from "../../favoritescomps/btnaddtofavoriteitem"
+import "../../favoritescomps/favoritecomps.css"
+import { FavoriteContext } from "../../../utils/favoriteprovider";
+import DeleteFavorite from "../../favoritescomps/deletefavorites";
+import FavoriteIcon from "@material-ui/icons/Favorite"
 
 const ItemsProduct = () => {
 
@@ -22,8 +28,12 @@ const ItemsProduct = () => {
                 height="100%"
             >
                 {itemsproduct.map((item: any) => (
+
                     <Box className="container_item" width="25%" display="block" mr="15px">
-                        <Link className="link_style" to={`/itemdetails?product=${item.product}&img=${item.img}&price=${item.price}&description=${item.description}`} >
+                        <Box bgcolor="rgb(235, 237, 238)" textAlign="right" padding="5px">
+                            <BtnAddToFavoriteItem product={item.product} img={item.img} price={item.price} ><FavoriteBorderOutlinedIcon /></BtnAddToFavoriteItem>
+                        </Box>
+                        <Link className="link_style" to={`/itemdetails?product=${item.product}&img=${item.img}&price=${item.price}&description=${item.description}&quantity=${item.quantity}`} >
                             <Box bgcolor="rgb(235, 237, 238)">
                                 <img width="100%" height="100%" src={item.img} />
                                 <Box
@@ -63,8 +73,8 @@ const ItemsProduct = () => {
                             </Box>
                         </Link>
                     </Box>
-                ))
-                }
+
+                ))}
             </Box>
 
 

@@ -52,7 +52,9 @@ const MenuBtn = () => {
                     <MenuItem onClick={handleClose}><Box marginRight="8px"><HomeOutlinedIcon /></Box>Home</MenuItem>
                 </Link>
                 <hr />
-                <MenuItem onClick={handleClose}><Box marginRight="8px"><FavoriteBorderOutlinedIcon /></Box>Favoritos</MenuItem>
+                <Link to="/favorites" className="menu_btn">
+                    <MenuItem onClick={handleClose}><Box marginRight="8px"><FavoriteBorderOutlinedIcon /></Box>Favoritos</MenuItem>
+                </Link>
                 <hr />
                 <MenuItem onClick={handleClose}><Box marginRight="8px"><PersonIcon /></Box>Homem</MenuItem>
                 <hr />

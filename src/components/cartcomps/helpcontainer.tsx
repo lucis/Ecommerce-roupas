@@ -7,9 +7,7 @@ import "./itemcart.css"
 const HelpContainer = () => {
     return (
         <div>
-            <Box width="85%"
-                
-            >
+            <Box>
                 <Box fontSize="16px"
                     fontFamily="monospace"
                     fontWeight="600"
