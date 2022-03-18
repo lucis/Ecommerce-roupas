@@ -7,6 +7,7 @@ import HomeNavBar from "../../components/homecomps/homenavbar/homenavbar";
 
 
 const FavoritesPag = () => {
+
     return (
         <div>
             <Box>

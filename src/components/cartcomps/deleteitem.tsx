@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import React, { FC, useContext } from "react";
+import React, { FC, useCallback, useContext } from "react";
 import { CartContext } from "../../utils/cartprovider";
 import "./itemcart.css"
 
@@ -11,11 +11,11 @@ const DeleteItem: FC<Props> = ({ children, item }) => {
 
     const { cart, setCart } = useContext(CartContext)
 
-    const OnDelete = (itemProduct: any) => {
+    const OnDelete = useCallback((itemProduct: any) => {
         const NewCart = cart.filter((item: any) => itemProduct !== item.product)
         setCart(NewCart)
         window.localStorage.setItem("cart", JSON.stringify(NewCart))
-    }
+    },[cart])
 
     return (
         <div>

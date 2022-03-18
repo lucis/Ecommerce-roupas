@@ -1,4 +1,4 @@
-import React, { createContext, FC, useState, useEffect} from "react";
+import React, { createContext, FC, useState, useEffect } from "react";
 
 interface Props {
     cart: any
@@ -25,7 +25,7 @@ const CartProvider: FC = ({ children }) => {
             setCart(JSON.parse(cartLocal))
         }
 
-    }, [cart])
+    }, [setCart])
 
 
 

@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import React, { FC, useContext} from "react";
+import React, { FC, useCallback, useContext } from "react";
 import { CartContext } from "../../utils/cartprovider";
 import "./itemdetails.css"
 
@@ -14,7 +14,7 @@ interface Props {
 const BtnAddCart: FC<Props> = ({ children, img, product, price, quantity }) => {
     const { cart, setCart } = useContext(CartContext)
 
-    const AddToCart = (product: any) => {
+    const AddToCart = useCallback((product: any) => {
         const newCart = [
             ...cart,
             {
@@ -25,7 +25,7 @@ const BtnAddCart: FC<Props> = ({ children, img, product, price, quantity }) => {
         ]
         setCart(newCart)
         window.localStorage.setItem("cart", JSON.stringify(newCart))
-    }
+    }, [cart])
 
 
     return (

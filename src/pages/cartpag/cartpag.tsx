@@ -3,10 +3,11 @@ import React from "react";
 import ContainerCart from "../../components/cartcomps/containercart";
 import HeaderNav from "../../components/homecomps/homenavbar/headernav";
 import HomeNavBar from "../../components/homecomps/homenavbar/homenavbar";
-import CartProvider from "../../utils/cartprovider";
+
 
 
 const CartPag = () => {
+
     return (
         <div>
             <Box>

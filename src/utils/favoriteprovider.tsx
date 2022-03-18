@@ -17,7 +17,7 @@ const FavoriteProvider: FC = ({ children }) => {
         if (newFavorite) {
             setFavorite(JSON.parse(newFavorite))
         }
-    }, [favorite])
+    }, [setFavorite])
 
     return (
         <FavoriteContext.Provider value={{
