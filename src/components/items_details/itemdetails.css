@@ -14,6 +14,9 @@
     font-weight: 500;
     cursor: pointer;
 }
+.btn_addcart:active{
+    background-color: white;
+}
 
 .btn_addcart:hover{
     color: gray;

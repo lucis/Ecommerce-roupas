@@ -12,9 +12,11 @@ const DeleteFavorite: FC<Props> = ({ children, item }) => {
     const { favorite, setFavorite } = useContext(FavoriteContext)
 
     const onDeleteFavorite = (productItem: any) => {
-        const newFavorite = favorite.filter((item: any) => productItem != item.product)
+        const newFavorite = favorite.filter((item: any) => productItem !== item.product)
         setFavorite(newFavorite)
-        console.log(favorite)
+        window.localStorage.setItem("favorite", JSON.stringify(newFavorite))
+
+        
     }
 
     return (

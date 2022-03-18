@@ -1,4 +1,4 @@
-import React, { createContext, FC, useState } from "react";
+import React, { createContext, FC, useState, useEffect} from "react";
 
 interface Props {
     cart: any
@@ -15,8 +15,18 @@ export const CartContext = createContext<Props>({ cart: [], setCart: () => { }, 
 
 const CartProvider: FC = ({ children }) => {
 
+
     const [cart, setCart] = useState([])
     const [totalValue, setTotalValue] = useState()
+
+    useEffect(() => {
+        const cartLocal = window.localStorage.getItem("cart")
+        if (cartLocal) {
+            setCart(JSON.parse(cartLocal))
+        }
+
+    }, [cart])
+
 
 
     return (

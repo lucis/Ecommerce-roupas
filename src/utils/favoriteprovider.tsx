@@ -1,4 +1,4 @@
-import React, { createContext, FC, useState } from "react"
+import React, { createContext, FC, useEffect, useState } from "react"
 
 interface Props {
     favorite: any
@@ -11,6 +11,13 @@ export const FavoriteContext = createContext<Props>({ favorite: [], setFavorite:
 const FavoriteProvider: FC = ({ children }) => {
 
     const [favorite, setFavorite] = useState([])
+
+    useEffect(() => {
+        const newFavorite = window.localStorage.getItem("favorite")
+        if (newFavorite) {
+            setFavorite(JSON.parse(newFavorite))
+        }
+    }, [favorite])
 
     return (
         <FavoriteContext.Provider value={{

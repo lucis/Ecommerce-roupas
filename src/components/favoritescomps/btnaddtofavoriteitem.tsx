@@ -14,15 +14,16 @@ const BtnAddToFavoriteItem: FC<Props> = ({ children, product, img, price }) => {
     const { favorite, setFavorite } = useContext(FavoriteContext)
 
     const toAddFavorite = (product: string, img: string, price: string) => {
-        setFavorite(
-            [...favorite,
-            {
-                product,
-                img,
-                price,
-            }
-            ]
-        )
+
+        const newFavorite = [...favorite,
+        {
+            product,
+            img,
+            price,
+        }
+        ]
+        setFavorite(newFavorite)
+        window.localStorage.setItem("favorite" , JSON.stringify(newFavorite))
     }
     return (
         <div>

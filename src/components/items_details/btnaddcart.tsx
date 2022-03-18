@@ -1,6 +1,5 @@
-import { CollectionsBookmarkOutlined, SwapVerticalCircleTwoTone } from "@material-ui/icons";
 import { Box } from "@mui/system";
-import React, { FC, useContext } from "react";
+import React, { FC, useContext} from "react";
 import { CartContext } from "../../utils/cartprovider";
 import "./itemdetails.css"
 
@@ -16,31 +15,16 @@ const BtnAddCart: FC<Props> = ({ children, img, product, price, quantity }) => {
     const { cart, setCart } = useContext(CartContext)
 
     const AddToCart = (product: any) => {
-        const productInCart = cart.find((product: any) => product.product == product)
-        let quantity = 0
-        if (!productInCart) {
-            setCart(
-                [...cart,
-                {
-                    img,
-                    product,
-                    price,
-                    quantity: 1
-                }
-                ]
-            )
-        } else {
-            setCart(
-                [...cart,
-                {
-                    img,
-                    product,
-                    price,
-                    quantity: quantity + 1
-                }
-                ]
-            )
-        }
+        const newCart = [
+            ...cart,
+            {
+                product,
+                img,
+                price,
+            }
+        ]
+        setCart(newCart)
+        window.localStorage.setItem("cart", JSON.stringify(newCart))
     }
 
 
