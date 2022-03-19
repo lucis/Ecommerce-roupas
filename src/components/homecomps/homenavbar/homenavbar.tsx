@@ -67,9 +67,11 @@ const HomeNavBar = () => {
                     <SearchNavHome />
                 </Box>
                 <Box display='flex'>
-                    <Box >
-                        <IconBtnNavHome><PermIdentityIcon /></IconBtnNavHome>
-                    </Box>
+                    <Link to="/login">
+                        <Box >
+                            <IconBtnNavHome><PermIdentityIcon /></IconBtnNavHome>
+                        </Box>
+                    </Link>
                     <Link to="/favorites">
                         <Box >
                             <IconBtnNavHome><FavoriteBorderOutlinedIcon /></IconBtnNavHome>
