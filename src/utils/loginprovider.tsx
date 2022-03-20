@@ -1,5 +1,5 @@
 import { AnyRecord } from "dns"
-import React, { FC, useState, createContext } from "react"
+import React, { FC, useState, createContext, useCallback, useEffect } from "react"
 
 
 interface Props {
@@ -34,6 +34,20 @@ const LoginProvider: FC = ({ children }) => {
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPasswd, setLoginPasswd] = useState("")
     const [user, setUser] = useState<any>({})
+    const { navigate } = useNavigator()
+
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                navigate('/logado')
+            }
+            setUser(user)
+         })
+    }, [])
+
+    const loginWithEmailAndPassword = useCallback((({} : EmailPassword)) => {
+
+    }, []) 
 
     return (
         <LoginContext.Provider value={
